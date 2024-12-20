@@ -26,7 +26,8 @@ public class CommandLineInterface {
                     .addOption("s", false, "Server mode")
                     .addOption("league", true, "League level")
                     .addOption("seed", true, "Seed")
-                    .addOption("l", true, "File output for logs");
+                    .addOption("l", true, "File output for logs")
+                    .addOption("d", false, "Referee initial data");
 
             CommandLine cmd = new DefaultParser().parse(options, args);
 
@@ -45,7 +46,7 @@ public class CommandLineInterface {
             }
 
             if (cmd.hasOption("league")) {
-                runner.setLeagueLevel(Integer.parseInt(cmd.getOptionValue("league")));
+                runner.setLeagueLevel(Integer.valueOf(cmd.getOptionValue("league")));
             } else {
                 runner.setLeagueLevel(5);
             }
