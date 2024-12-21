@@ -33,4 +33,15 @@ Option `-Dleague.level=5` above defines League-5 that is valid for Bronze and hi
 
 To make it easier to set up the environment, I put two bots in the "sample_bots" directory. Bot B is exactly the placeholder code that Codingame IDE generates for python, it just reads the input and prints "WAIT". Bot A is a small modification, it grows basic cells in the first best empty square. Both bots can play in the bronze league, although weakly, and bot A consistently wins against bot B. You can use them to test your Brutaltester setup. The command above shall work.
 
+## Psyleague notes
+
+For convenience, a working sample of `play_game.py` file is in `psyleague_info` folder.
+
+Default configuration created with `psyleague config` is for C++, change `cmd_bot_setup`, `cmd_play_game` for your language, e.g. for Python:
+
+```
+cmd_bot_setup = ""
+cmd_play_game = "python play_game.py 'python %DIR%/%P1%' 'python %DIR%/%P2%'"
+```
+
 ---
